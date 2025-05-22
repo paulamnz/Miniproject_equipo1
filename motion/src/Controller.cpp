@@ -51,11 +51,45 @@ int main (int argc, char * argv[])
 #include <chrono>
 #include "rclcpp/rclcpp.hpp"
 #include "turtlesim/srv/set_pen.hpp"
+#include "turtlesim/srv/teleport_absolute.hpp"
+
 
 using namespace std::chrono_literals;
 
+void Controller::initialize()
+{
+    auto teleport_client = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
+    while (!teleport_client->wait_for_service(1s)) {
+        RCLCPP_INFO(this->get_logger(), "Esperando servicio de teleport...");
+    }
 
-void set_pen_color(std::shared_ptr<rclcpp::Node> node, uint8_t r, uint8_t g, uint8_t b, uint8_t width = 2, bool off = false)
+    auto teleport_request = std::make_shared<turtlesim::srv::TeleportAbsolute::Request>();
+    teleport_request->x = 2.0;
+    teleport_request->y = 7.0;
+    teleport_request->theta = 0.0;
+
+    auto teleport_future = teleport_client->async_send_request(teleport_request);
+    rclcpp::spin_until_future_complete(shared_from_this(), teleport_future);
+
+    auto pen_client = this->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
+    while (!pen_client->wait_for_service(1s)) {
+        RCLCPP_INFO(this->get_logger(), "Esperando servicio set_pen...");
+    }
+
+    auto pen_request = std::make_shared<turtlesim::srv::SetPen::Request>();
+    pen_request->r = 255;
+    pen_request->g = 0;
+    pen_request->b = 0;
+    pen_request->width = 5;
+    pen_request->off = 1;
+
+    auto pen_future = pen_client->async_send_request(pen_request);
+    rclcpp::spin_until_future_complete(shared_from_this(), pen_future);
+}
+
+
+
+void set_pen_color(std::shared_ptr<rclcpp::Node> node, uint8_t r, uint8_t g, uint8_t b, uint8_t width, bool off)
 {
     auto client = node->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
 
@@ -63,7 +97,7 @@ void set_pen_color(std::shared_ptr<rclcpp::Node> node, uint8_t r, uint8_t g, uin
     while (!client->wait_for_service(std::chrono::seconds(1))) {
         RCLCPP_INFO(node->get_logger(), "Esperando al servicio /turtle1/set_pen...");
     }
-
+    
     auto request = std::make_shared<turtlesim::srv::SetPen::Request>();
     request->r = r;
     request->g = g;
@@ -78,7 +112,7 @@ void set_pen_color(std::shared_ptr<rclcpp::Node> node, uint8_t r, uint8_t g, uin
 Controller::Controller() : Node("Controller"), count(0), has_moved(false)
 {
     using std::placeholders::_1;
-
+    
     publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
     sub_ = this->create_subscription<turtlesim::msg::Pose>(
         "/turtle1/pose", 10, std::bind(&Controller::execute_command, this, _1));
@@ -116,7 +150,7 @@ void Controller::execute_command(const turtlesim::msg::Pose &msg)
 
     rclcpp::sleep_for(1s);
 
-    set_pen_color(shared_from_this(), 255, 0, 0);  // Cambia a rojo
+    set_pen_color(shared_from_this(), 255, 0, 0, 5, 0);  // Cambia a rojo
     rclcpp::sleep_for(100ms);        // Pequeña espera por si el servicio tarda
 
     vel.linear.x = 2.0;
@@ -150,6 +184,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<Controller>();
+    node->initialize();
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;

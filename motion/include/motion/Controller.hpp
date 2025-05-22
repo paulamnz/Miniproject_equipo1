@@ -24,6 +24,8 @@ class Controller : public rclcpp::Node
 #include "geometry_msgs/msg/twist.hpp"
 #include "turtlesim/msg/pose.hpp"
 
+
+
 class Controller : public rclcpp::Node
 {
 public:
@@ -31,7 +33,7 @@ public:
     ~Controller();
 
     void execute_command(const turtlesim::msg::Pose &msg);
-
+    void initialize();
 private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::Subscription<turtlesim::msg::Pose>::SharedPtr sub_;
