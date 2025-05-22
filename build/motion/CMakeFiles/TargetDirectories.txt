@@ -1,0 +1,10 @@
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/uninstall.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/motion_uninstall.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/Controller.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/test.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/edit_cache.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/rebuild_cache.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/list_install_components.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/install.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/install/local.dir
+/home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/install/strip.dir
