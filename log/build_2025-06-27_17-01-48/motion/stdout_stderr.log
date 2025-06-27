@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target Controller[0m
+[100%] Built target Controller
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/lib/motion/Controller
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion//launch/launch.xml
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/package_run_dependencies/motion
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/parent_prefix_path/motion
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/path.sh
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/path.dsv
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.bash
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.sh
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.zsh
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.dsv
+-- Symlinking: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/package.dsv
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/packages/motion
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/cmake/motionConfig.cmake
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/cmake/motionConfig-version.cmake
+-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/package.xml

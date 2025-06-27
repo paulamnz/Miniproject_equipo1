@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target Controller[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o[0m
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:176:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Controller::[01;32m[KdrawCurves[m[K(double, bool, bool, bool, std::string)[m[K’
+  176 | void [01;31m[KController[m[K::drawCurves(double radius,
+      |      [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:2[m[K:
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/include/motion/Controller.hpp:30:8:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Controller::[01;32m[KdrawCurves[m[K(double, bool, bool, bool, std::string, double)[m[K’
+   30 |   void [01;36m[KdrawCurves[m[K(double radius,
+      |        [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/include/motion/Controller.hpp:13:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Controller[m[K’ defined here
+   13 | class [01;36m[KController[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,107 @@
+[0.000000] (-) TimerEvent: {}
+[0.000442] (motion) JobQueued: {'identifier': 'motion', 'dependencies': OrderedDict()}
+[0.000489] (motion) JobStarted: {'identifier': 'motion'}
+[0.008211] (motion) JobProgress: {'identifier': 'motion', 'progress': 'cmake'}
+[0.008856] (motion) JobProgress: {'identifier': 'motion', 'progress': 'build'}
+[0.009603] (motion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion', '--', '-j20', '-l20'], 'cwd': '/home/usuario/ros/Miniproject_equipo1_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'usuario'), ('GIT_ASKPASS', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/usuario/uma_environment_tools/matlogger2/build:/home/usuario/uma_environment_tools/matlogger2/build'), ('HOME', '/home/usuario'), ('TERM_PROGRAM_VERSION', '1.100.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-23441296-f660-4aa3-bd28-3b85c16fd49e.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/node'), ('WORKSPACE_TO_SOURCE', '/home/usuario/ros/Miniproject_equipo1_ws'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'usuario'), ('NAME', 'MSIdeEmilio-Trabajo'), ('WSL_INTEROP', '/run/WSL/15984_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/mingw-w64/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Muse Hub/lib:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/usuario/.local/bin:/home/usuario/.local/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-1f651f055a.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.095427] (motion) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o\x1b[0m\n'}
+[0.099689] (-) TimerEvent: {}
+[0.199966] (-) TimerEvent: {}
+[0.300283] (-) TimerEvent: {}
+[0.400613] (-) TimerEvent: {}
+[0.500973] (-) TimerEvent: {}
+[0.601272] (-) TimerEvent: {}
+[0.701706] (-) TimerEvent: {}
+[0.802068] (-) TimerEvent: {}
+[0.902448] (-) TimerEvent: {}
+[1.002838] (-) TimerEvent: {}
+[1.103174] (-) TimerEvent: {}
+[1.203546] (-) TimerEvent: {}
+[1.303949] (-) TimerEvent: {}
+[1.404355] (-) TimerEvent: {}
+[1.504795] (-) TimerEvent: {}
+[1.605271] (-) TimerEvent: {}
+[1.645019] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::\x1b[01;32m\x1b[KdrawTriangleUP\x1b[m\x1b[K(double, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.645430] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:129:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kx\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.645513] (motion) StderrLine: {'line': b'  129 |         double \x1b[01;35m\x1b[Kx\x1b[m\x1b[K = pose.x;\n'}
+[1.645551] (motion) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.645578] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:130:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ky\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.645605] (motion) StderrLine: {'line': b'  130 |         double \x1b[01;35m\x1b[Ky\x1b[m\x1b[K = pose.y;\n'}
+[1.645631] (motion) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.645655] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:131:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktheta\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.645680] (motion) StderrLine: {'line': b'  131 |         double \x1b[01;35m\x1b[Ktheta\x1b[m\x1b[K = pose.theta;\n'}
+[1.645706] (motion) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.705467] (-) TimerEvent: {}
+[1.805819] (-) TimerEvent: {}
+[1.906176] (-) TimerEvent: {}
+[2.006744] (-) TimerEvent: {}
+[2.107082] (-) TimerEvent: {}
+[2.207563] (-) TimerEvent: {}
+[2.307895] (-) TimerEvent: {}
+[2.408330] (-) TimerEvent: {}
+[2.508707] (-) TimerEvent: {}
+[2.609151] (-) TimerEvent: {}
+[2.709522] (-) TimerEvent: {}
+[2.809909] (-) TimerEvent: {}
+[2.910303] (-) TimerEvent: {}
+[3.010824] (-) TimerEvent: {}
+[3.111197] (-) TimerEvent: {}
+[3.211627] (-) TimerEvent: {}
+[3.312030] (-) TimerEvent: {}
+[3.412557] (-) TimerEvent: {}
+[3.513069] (-) TimerEvent: {}
+[3.613500] (-) TimerEvent: {}
+[3.713833] (-) TimerEvent: {}
+[3.814150] (-) TimerEvent: {}
+[3.914529] (-) TimerEvent: {}
+[4.014980] (-) TimerEvent: {}
+[4.115297] (-) TimerEvent: {}
+[4.215699] (-) TimerEvent: {}
+[4.316060] (-) TimerEvent: {}
+[4.416352] (-) TimerEvent: {}
+[4.516807] (-) TimerEvent: {}
+[4.617122] (-) TimerEvent: {}
+[4.717496] (-) TimerEvent: {}
+[4.817910] (-) TimerEvent: {}
+[4.918245] (-) TimerEvent: {}
+[5.018565] (-) TimerEvent: {}
+[5.118855] (-) TimerEvent: {}
+[5.219189] (-) TimerEvent: {}
+[5.319516] (-) TimerEvent: {}
+[5.419852] (-) TimerEvent: {}
+[5.520182] (-) TimerEvent: {}
+[5.620526] (-) TimerEvent: {}
+[5.720913] (-) TimerEvent: {}
+[5.821246] (-) TimerEvent: {}
+[5.921554] (-) TimerEvent: {}
+[5.990669] (motion) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Controller\x1b[0m\n'}
+[6.021669] (-) TimerEvent: {}
+[6.121960] (-) TimerEvent: {}
+[6.222413] (-) TimerEvent: {}
+[6.322761] (-) TimerEvent: {}
+[6.348005] (motion) StdoutLine: {'line': b'[100%] Built target Controller\n'}
+[6.355497] (motion) CommandEnded: {'returncode': 0}
+[6.356844] (motion) JobProgress: {'identifier': 'motion', 'progress': 'install'}
+[6.363582] (motion) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion'], 'cwd': '/home/usuario/ros/Miniproject_equipo1_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'usuario'), ('GIT_ASKPASS', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/usuario/uma_environment_tools/matlogger2/build:/home/usuario/uma_environment_tools/matlogger2/build'), ('HOME', '/home/usuario'), ('TERM_PROGRAM_VERSION', '1.100.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-23441296-f660-4aa3-bd28-3b85c16fd49e.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/node'), ('WORKSPACE_TO_SOURCE', '/home/usuario/ros/Miniproject_equipo1_ws'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'usuario'), ('NAME', 'MSIdeEmilio-Trabajo'), ('WSL_INTEROP', '/run/WSL/15984_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/mingw-w64/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Muse Hub/lib:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/usuario/.local/bin:/home/usuario/.local/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-1f651f055a.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[6.368904] (motion) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.370102] (motion) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[6.370526] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/lib/motion/Controller\n'}
+[6.371619] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion//launch/launch.xml\n'}
+[6.371879] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/package_run_dependencies/motion\n'}
+[6.372049] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/parent_prefix_path/motion\n'}
+[6.372173] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/ament_prefix_path.sh\n'}
+[6.372428] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/ament_prefix_path.dsv\n'}
+[6.372560] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/path.sh\n'}
+[6.372815] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/environment/path.dsv\n'}
+[6.373267] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.bash\n'}
+[6.373472] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.sh\n'}
+[6.373752] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.zsh\n'}
+[6.374007] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/local_setup.dsv\n'}
+[6.374122] (motion) StdoutLine: {'line': b'-- Symlinking: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/package.dsv\n'}
+[6.381941] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/ament_index/resource_index/packages/motion\n'}
+[6.382135] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/cmake/motionConfig.cmake\n'}
+[6.382407] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/cmake/motionConfig-version.cmake\n'}
+[6.382625] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/usuario/ros/Miniproject_equipo1_ws/install/motion/share/motion/package.xml\n'}
+[6.383877] (motion) CommandEnded: {'returncode': 0}
+[6.400323] (motion) JobEnded: {'identifier': 'motion', 'rc': 0}
+[6.401111] (-) EventReactorShutdown: {}

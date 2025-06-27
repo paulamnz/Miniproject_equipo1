@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target Controller[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o[0m
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::[01;32m[Krotate[m[K(double, double)[m[K’:
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:88:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_theta[m[K’ was not declared in this scope
+   88 |     double error = normalize_angle([01;31m[Ktarget_theta[m[K - pose.theta);
+      |                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:81:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kradians[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   81 | void Controller::rotate([01;35m[Kdouble radians[m[K, double angular_speed)
+      |                         [01;35m[K~~~~~~~^~~~~~~[m[K
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:81:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kangular_speed[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   81 | void Controller::rotate(double radians, [01;35m[Kdouble angular_speed[m[K)
+      |                                         [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::[01;32m[KdrawTriangleUP[m[K(double, bool)[m[K’:
+[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:139:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_up[m[K’ was not declared in this scope
+  139 |     rotate(2 * [01;31m[Kangle_up[m[K);      // gira 120° (mirar ↖)
+      |                [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

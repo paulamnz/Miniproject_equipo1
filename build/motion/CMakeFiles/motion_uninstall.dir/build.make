@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ros2/ros/Miniproject_equipo1_ws/src/motion
+CMAKE_SOURCE_DIR = /home/usuario/ros/Miniproject_equipo1_ws/src/motion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ros2/ros/Miniproject_equipo1_ws/build/motion
+CMAKE_BINARY_DIR = /home/usuario/ros/Miniproject_equipo1_ws/build/motion
 
 # Utility rule file for motion_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/motion_uninstall.dir/compiler_depend.make
 include CMakeFiles/motion_uninstall.dir/progress.make
 
 CMakeFiles/motion_uninstall:
-	/usr/bin/cmake -P /home/ros2/ros/Miniproject_equipo1_ws/build/motion/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/usuario/ros/Miniproject_equipo1_ws/build/motion/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 motion_uninstall: CMakeFiles/motion_uninstall
 motion_uninstall: CMakeFiles/motion_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/motion_uninstall.dir/clean:
 .PHONY : CMakeFiles/motion_uninstall.dir/clean
 
 CMakeFiles/motion_uninstall.dir/depend:
-	cd /home/ros2/ros/Miniproject_equipo1_ws/build/motion && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ros2/ros/Miniproject_equipo1_ws/src/motion /home/ros2/ros/Miniproject_equipo1_ws/src/motion /home/ros2/ros/Miniproject_equipo1_ws/build/motion /home/ros2/ros/Miniproject_equipo1_ws/build/motion /home/ros2/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/motion_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/ros/Miniproject_equipo1_ws/build/motion && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/ros/Miniproject_equipo1_ws/src/motion /home/usuario/ros/Miniproject_equipo1_ws/src/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/motion_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/motion_uninstall.dir/depend
 
