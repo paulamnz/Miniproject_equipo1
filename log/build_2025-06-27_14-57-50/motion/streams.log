@@ -1,0 +1,15 @@
+[0.008s] Invoking command in '/home/usuario/ros/Miniproject_equipo1_ws/build/motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/ros/Miniproject_equipo1_ws/build/motion -- -j20 -l20
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target Controller[0m
+[0.042s] [ 50%] [32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o[0m
+[1.292s] [01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::[01;32m[KdrawTriangleUP[m[K(double, bool)[m[K’:
+[1.292s] [01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:122:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_down[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.292s]   122 |   double [01;35m[Kangle_down[m[K = -M_PI / 3.0;  // -60 grados
+[1.292s]       |          [01;35m[K^~~~~~~~~~[m[K
+[1.292s] [01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:[m[K At global scope:
+[1.292s] [01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:164:1:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kvoid[m[K’
+[1.292s]   164 | [01;31m[Kvoid[m[K Controller::drawScene()
+[1.292s]       | [01;31m[K^~~~[m[K
+[2.872s] gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
+[2.873s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
+[2.873s] gmake: *** [Makefile:146: all] Error 2
+[2.875s] Invoked command in '/home/usuario/ros/Miniproject_equipo1_ws/build/motion' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/usuario/ros/Miniproject_equipo1_ws/build/motion -- -j20 -l20

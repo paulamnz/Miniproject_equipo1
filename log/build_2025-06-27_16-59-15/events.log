@@ -1,0 +1,59 @@
+[0.000000] (-) TimerEvent: {}
+[0.000476] (motion) JobQueued: {'identifier': 'motion', 'dependencies': OrderedDict()}
+[0.000651] (motion) JobStarted: {'identifier': 'motion'}
+[0.009772] (motion) JobProgress: {'identifier': 'motion', 'progress': 'cmake'}
+[0.010835] (motion) JobProgress: {'identifier': 'motion', 'progress': 'build'}
+[0.010905] (motion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion', '--', '-j20', '-l20'], 'cwd': '/home/usuario/ros/Miniproject_equipo1_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'usuario'), ('GIT_ASKPASS', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/usuario/uma_environment_tools/matlogger2/build:/home/usuario/uma_environment_tools/matlogger2/build'), ('HOME', '/home/usuario'), ('TERM_PROGRAM_VERSION', '1.100.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-23441296-f660-4aa3-bd28-3b85c16fd49e.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/node'), ('WORKSPACE_TO_SOURCE', '/home/usuario/ros/Miniproject_equipo1_ws'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('_colcon_cd_root', '/opt/ros/humble/'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'usuario'), ('NAME', 'MSIdeEmilio-Trabajo'), ('WSL_INTEROP', '/run/WSL/15984_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/usuario/.vscode-server/bin/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/mingw-w64/mingw64/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Muse Hub/lib:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/emili/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/usuario/.local/bin:/home/usuario/.local/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-1f651f055a.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/usuario/ros/Miniproject_equipo1_ws/build/motion'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/usuario/ros/Miniproject_equipo1_ws/install/motion:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.096796] (motion) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Controller\x1b[0m\n'}
+[0.099474] (-) TimerEvent: {}
+[0.109208] (motion) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o\x1b[0m\n'}
+[0.199623] (-) TimerEvent: {}
+[0.299941] (-) TimerEvent: {}
+[0.400256] (-) TimerEvent: {}
+[0.500620] (-) TimerEvent: {}
+[0.600956] (-) TimerEvent: {}
+[0.701344] (-) TimerEvent: {}
+[0.801911] (-) TimerEvent: {}
+[0.902300] (-) TimerEvent: {}
+[1.002740] (-) TimerEvent: {}
+[1.103138] (-) TimerEvent: {}
+[1.203540] (-) TimerEvent: {}
+[1.303933] (-) TimerEvent: {}
+[1.404290] (-) TimerEvent: {}
+[1.504611] (-) TimerEvent: {}
+[1.604948] (-) TimerEvent: {}
+[1.689491] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::\x1b[01;32m\x1b[Krotate\x1b[m\x1b[K(double, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.689687] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:83:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kqualified-id in declaration before \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.689749] (motion) StderrLine: {'line': b'   83 |         void Controller::rotate\x1b[01;31m\x1b[K(\x1b[m\x1b[Kdouble radians, double angular_speed)\n'}
+[1.689812] (motion) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.689969] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:81:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kradians\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.690031] (motion) StderrLine: {'line': b'   81 | void Controller::rotate(\x1b[01;35m\x1b[Kdouble radians\x1b[m\x1b[K, double angular_speed)\n'}
+[1.690093] (motion) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[1.690144] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:81:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kangular_speed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.690198] (motion) StderrLine: {'line': b'   81 | void Controller::rotate(double radians, \x1b[01;35m\x1b[Kdouble angular_speed\x1b[m\x1b[K)\n'}
+[1.690267] (motion) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.705079] (-) TimerEvent: {}
+[1.805465] (-) TimerEvent: {}
+[1.905966] (-) TimerEvent: {}
+[2.006458] (-) TimerEvent: {}
+[2.106874] (-) TimerEvent: {}
+[2.207364] (-) TimerEvent: {}
+[2.307719] (-) TimerEvent: {}
+[2.408058] (-) TimerEvent: {}
+[2.508475] (-) TimerEvent: {}
+[2.608958] (-) TimerEvent: {}
+[2.709425] (-) TimerEvent: {}
+[2.809839] (-) TimerEvent: {}
+[2.910199] (-) TimerEvent: {}
+[3.010584] (-) TimerEvent: {}
+[3.110978] (-) TimerEvent: {}
+[3.211390] (-) TimerEvent: {}
+[3.311700] (-) TimerEvent: {}
+[3.412045] (-) TimerEvent: {}
+[3.512378] (-) TimerEvent: {}
+[3.517134] (motion) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1\n'}
+[3.517355] (motion) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2\n'}
+[3.517525] (motion) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.519629] (motion) CommandEnded: {'returncode': 2}
+[3.533153] (motion) JobEnded: {'identifier': 'motion', 'rc': 2}
+[3.543949] (-) EventReactorShutdown: {}

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ros2/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp" "CMakeFiles/Controller.dir/src/Controller.cpp.o" "gcc" "CMakeFiles/Controller.dir/src/Controller.cpp.o.d"
+  "/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp" "CMakeFiles/Controller.dir/src/Controller.cpp.o" "gcc" "CMakeFiles/Controller.dir/src/Controller.cpp.o.d"
   )
 
 # Targets to which this target links.
