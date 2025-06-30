@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuario/ros/Miniproject_equipo1_ws/src/motion
+CMAKE_SOURCE_DIR = /home/lili/ros/Miniproject_equipo1_2_ws/src/motion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuario/ros/Miniproject_equipo1_ws/build/motion
+CMAKE_BINARY_DIR = /home/lili/ros/Miniproject_equipo1_2_ws/build/motion
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/usuario/ros/Miniproject_equipo1_ws/build/motion && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/ros/Miniproject_equipo1_ws/src/motion /home/usuario/ros/Miniproject_equipo1_ws/src/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion /home/usuario/ros/Miniproject_equipo1_ws/build/motion/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lili/ros/Miniproject_equipo1_2_ws/build/motion && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lili/ros/Miniproject_equipo1_2_ws/src/motion /home/lili/ros/Miniproject_equipo1_2_ws/src/motion /home/lili/ros/Miniproject_equipo1_2_ws/build/motion /home/lili/ros/Miniproject_equipo1_2_ws/build/motion /home/lili/ros/Miniproject_equipo1_2_ws/build/motion/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

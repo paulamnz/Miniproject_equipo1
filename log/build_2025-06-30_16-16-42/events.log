@@ -1,0 +1,193 @@
+[0.000000] (-) TimerEvent: {}
+[0.002349] (motion) JobQueued: {'identifier': 'motion', 'dependencies': OrderedDict()}
+[0.002517] (motion) JobStarted: {'identifier': 'motion'}
+[0.034026] (motion) JobProgress: {'identifier': 'motion', 'progress': 'cmake'}
+[0.035256] (motion) JobProgress: {'identifier': 'motion', 'progress': 'build'}
+[0.036318] (motion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion', '--', '-j4', '-l4'], 'cwd': '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lili'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/lili/uma_environment_tools/matlogger2/build'), ('HOME', '/home/lili'), ('OLDPWD', '/home/lili'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('MANAGERPID', '1678'), ('WORKSPACE_TO_SOURCE', '/home/lili/ros/Miniproject_equipo1_2_ws'), ('SYSTEMD_EXEC_PID', '2011'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4516'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lili'), ('JOURNAL_STREAM', '8:17573'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lili'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lili/.local/bin'), ('SESSION_MANAGER', 'local/lili-Aspire-V3-572G:@/tmp/.ICE-unix/1838,unix/lili-Aspire-V3-572G:/tmp/.ICE-unix/1838'), ('INVOCATION_ID', '02f5c36acc1d443188de954e265f77d2'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C7FC92'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f96a2528-3ceb-481f-abbc-187410ff3535'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble')]), 'shell': False}
+[0.099558] (-) TimerEvent: {}
+[0.170265] (motion) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Controller\x1b[0m\n'}
+[0.200695] (-) TimerEvent: {}
+[0.227107] (motion) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o\x1b[0m\n'}
+[0.301419] (-) TimerEvent: {}
+[0.402915] (-) TimerEvent: {}
+[0.504227] (-) TimerEvent: {}
+[0.605118] (-) TimerEvent: {}
+[0.705597] (-) TimerEvent: {}
+[0.806923] (-) TimerEvent: {}
+[0.910331] (-) TimerEvent: {}
+[1.012830] (-) TimerEvent: {}
+[1.115038] (-) TimerEvent: {}
+[1.215685] (-) TimerEvent: {}
+[1.316654] (-) TimerEvent: {}
+[1.417324] (-) TimerEvent: {}
+[1.519017] (-) TimerEvent: {}
+[1.619702] (-) TimerEvent: {}
+[1.720372] (-) TimerEvent: {}
+[1.820734] (-) TimerEvent: {}
+[1.921104] (-) TimerEvent: {}
+[2.021467] (-) TimerEvent: {}
+[2.121827] (-) TimerEvent: {}
+[2.222203] (-) TimerEvent: {}
+[2.322569] (-) TimerEvent: {}
+[2.422960] (-) TimerEvent: {}
+[2.523329] (-) TimerEvent: {}
+[2.623695] (-) TimerEvent: {}
+[2.724058] (-) TimerEvent: {}
+[2.824654] (-) TimerEvent: {}
+[2.926760] (-) TimerEvent: {}
+[3.028550] (-) TimerEvent: {}
+[3.128926] (-) TimerEvent: {}
+[3.231707] (-) TimerEvent: {}
+[3.332391] (-) TimerEvent: {}
+[3.432789] (-) TimerEvent: {}
+[3.534381] (-) TimerEvent: {}
+[3.636096] (-) TimerEvent: {}
+[3.738899] (-) TimerEvent: {}
+[3.840819] (-) TimerEvent: {}
+[3.943560] (-) TimerEvent: {}
+[4.044895] (-) TimerEvent: {}
+[4.146757] (-) TimerEvent: {}
+[4.247827] (-) TimerEvent: {}
+[4.348569] (-) TimerEvent: {}
+[4.449999] (-) TimerEvent: {}
+[4.550868] (-) TimerEvent: {}
+[4.651401] (-) TimerEvent: {}
+[4.752233] (-) TimerEvent: {}
+[4.852957] (-) TimerEvent: {}
+[4.953272] (-) TimerEvent: {}
+[5.053840] (-) TimerEvent: {}
+[5.154353] (-) TimerEvent: {}
+[5.254876] (-) TimerEvent: {}
+[5.355334] (-) TimerEvent: {}
+[5.455982] (-) TimerEvent: {}
+[5.556353] (-) TimerEvent: {}
+[5.656713] (-) TimerEvent: {}
+[5.757259] (-) TimerEvent: {}
+[5.857634] (-) TimerEvent: {}
+[5.958013] (-) TimerEvent: {}
+[6.058423] (-) TimerEvent: {}
+[6.158738] (-) TimerEvent: {}
+[6.259116] (-) TimerEvent: {}
+[6.359518] (-) TimerEvent: {}
+[6.459898] (-) TimerEvent: {}
+[6.560272] (-) TimerEvent: {}
+[6.660685] (-) TimerEvent: {}
+[6.761117] (-) TimerEvent: {}
+[6.861529] (-) TimerEvent: {}
+[6.961895] (-) TimerEvent: {}
+[7.062265] (-) TimerEvent: {}
+[7.162639] (-) TimerEvent: {}
+[7.263020] (-) TimerEvent: {}
+[7.363444] (-) TimerEvent: {}
+[7.463836] (-) TimerEvent: {}
+[7.564227] (-) TimerEvent: {}
+[7.664597] (-) TimerEvent: {}
+[7.764970] (-) TimerEvent: {}
+[7.865367] (-) TimerEvent: {}
+[7.965725] (-) TimerEvent: {}
+[8.066060] (-) TimerEvent: {}
+[8.166556] (-) TimerEvent: {}
+[8.267040] (-) TimerEvent: {}
+[8.367528] (-) TimerEvent: {}
+[8.467959] (-) TimerEvent: {}
+[8.568379] (-) TimerEvent: {}
+[8.668782] (-) TimerEvent: {}
+[8.769218] (-) TimerEvent: {}
+[8.869628] (-) TimerEvent: {}
+[8.970015] (-) TimerEvent: {}
+[9.070421] (-) TimerEvent: {}
+[9.170833] (-) TimerEvent: {}
+[9.271264] (-) TimerEvent: {}
+[9.371679] (-) TimerEvent: {}
+[9.472094] (-) TimerEvent: {}
+[9.572535] (-) TimerEvent: {}
+[9.672953] (-) TimerEvent: {}
+[9.773407] (-) TimerEvent: {}
+[9.873871] (-) TimerEvent: {}
+[9.974255] (-) TimerEvent: {}
+[10.074636] (-) TimerEvent: {}
+[10.175023] (-) TimerEvent: {}
+[10.275405] (-) TimerEvent: {}
+[10.375790] (-) TimerEvent: {}
+[10.476175] (-) TimerEvent: {}
+[10.576590] (-) TimerEvent: {}
+[10.676987] (-) TimerEvent: {}
+[10.777471] (-) TimerEvent: {}
+[10.877893] (-) TimerEvent: {}
+[10.978277] (-) TimerEvent: {}
+[11.078631] (-) TimerEvent: {}
+[11.179010] (-) TimerEvent: {}
+[11.279410] (-) TimerEvent: {}
+[11.379797] (-) TimerEvent: {}
+[11.480184] (-) TimerEvent: {}
+[11.580588] (-) TimerEvent: {}
+[11.680980] (-) TimerEvent: {}
+[11.781388] (-) TimerEvent: {}
+[11.881764] (-) TimerEvent: {}
+[11.982144] (-) TimerEvent: {}
+[12.082545] (-) TimerEvent: {}
+[12.182961] (-) TimerEvent: {}
+[12.283436] (-) TimerEvent: {}
+[12.383873] (-) TimerEvent: {}
+[12.484297] (-) TimerEvent: {}
+[12.584676] (-) TimerEvent: {}
+[12.685054] (-) TimerEvent: {}
+[12.785468] (-) TimerEvent: {}
+[12.885849] (-) TimerEvent: {}
+[12.986248] (-) TimerEvent: {}
+[13.086618] (-) TimerEvent: {}
+[13.186986] (-) TimerEvent: {}
+[13.287377] (-) TimerEvent: {}
+[13.387751] (-) TimerEvent: {}
+[13.488120] (-) TimerEvent: {}
+[13.588501] (-) TimerEvent: {}
+[13.688859] (-) TimerEvent: {}
+[13.789264] (-) TimerEvent: {}
+[13.889670] (-) TimerEvent: {}
+[13.990083] (-) TimerEvent: {}
+[14.090566] (-) TimerEvent: {}
+[14.190965] (-) TimerEvent: {}
+[14.291323] (-) TimerEvent: {}
+[14.331775] (motion) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Controller\x1b[0m\n'}
+[14.391456] (-) TimerEvent: {}
+[14.491862] (-) TimerEvent: {}
+[14.592321] (-) TimerEvent: {}
+[14.694350] (-) TimerEvent: {}
+[14.799133] (-) TimerEvent: {}
+[14.900703] (-) TimerEvent: {}
+[15.002366] (-) TimerEvent: {}
+[15.105181] (-) TimerEvent: {}
+[15.206456] (-) TimerEvent: {}
+[15.308044] (-) TimerEvent: {}
+[15.409527] (-) TimerEvent: {}
+[15.511399] (-) TimerEvent: {}
+[15.613766] (-) TimerEvent: {}
+[15.715071] (-) TimerEvent: {}
+[15.776006] (motion) StdoutLine: {'line': b'[100%] Built target Controller\n'}
+[15.804330] (motion) CommandEnded: {'returncode': 0}
+[15.805390] (motion) JobProgress: {'identifier': 'motion', 'progress': 'install'}
+[15.815493] (-) TimerEvent: {}
+[15.829963] (motion) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion'], 'cwd': '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lili'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/lili/uma_environment_tools/matlogger2/build'), ('HOME', '/home/lili'), ('OLDPWD', '/home/lili'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('MANAGERPID', '1678'), ('WORKSPACE_TO_SOURCE', '/home/lili/ros/Miniproject_equipo1_2_ws'), ('SYSTEMD_EXEC_PID', '2011'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4516'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lili'), ('JOURNAL_STREAM', '8:17573'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lili'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lili/.local/bin'), ('SESSION_MANAGER', 'local/lili-Aspire-V3-572G:@/tmp/.ICE-unix/1838,unix/lili-Aspire-V3-572G:/tmp/.ICE-unix/1838'), ('INVOCATION_ID', '02f5c36acc1d443188de954e265f77d2'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C7FC92'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f96a2528-3ceb-481f-abbc-187410ff3535'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble')]), 'shell': False}
+[15.855508] (motion) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.856266] (motion) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.856862] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/lib/motion/Controller\n'}
+[15.858359] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion//launch/launch.xml\n'}
+[15.862868] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/package_run_dependencies/motion\n'}
+[15.864362] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/parent_prefix_path/motion\n'}
+[15.865016] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/ament_prefix_path.sh\n'}
+[15.865703] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/ament_prefix_path.dsv\n'}
+[15.866306] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/path.sh\n'}
+[15.866486] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/path.dsv\n'}
+[15.866642] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.bash\n'}
+[15.866796] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.sh\n'}
+[15.866951] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.zsh\n'}
+[15.867097] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.dsv\n'}
+[15.867252] (motion) StdoutLine: {'line': b'-- Symlinking: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/package.dsv\n'}
+[15.887165] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/packages/motion\n'}
+[15.887429] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/cmake/motionConfig.cmake\n'}
+[15.887627] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/cmake/motionConfig-version.cmake\n'}
+[15.887925] (motion) StdoutLine: {'line': b'-- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/package.xml\n'}
+[15.890907] (motion) CommandEnded: {'returncode': 0}
+[15.915799] (-) TimerEvent: {}
+[15.938378] (motion) JobEnded: {'identifier': 'motion', 'rc': 0}
+[15.939185] (-) EventReactorShutdown: {}

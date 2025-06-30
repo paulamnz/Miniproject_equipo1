@@ -1,0 +1,4 @@
+Invoking command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lili/ros/Miniproject_equipo1_2_ws/build/motion -- -j4 -l4
+Invoked command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lili/ros/Miniproject_equipo1_2_ws/build/motion -- -j4 -l4
+Invoking command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lili/ros/Miniproject_equipo1_2_ws/build/motion
+Invoked command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lili/ros/Miniproject_equipo1_2_ws/build/motion

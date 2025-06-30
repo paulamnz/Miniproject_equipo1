@@ -1,0 +1,7 @@
+[01m[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::drawScene()[m[K’:
+[01m[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:308:30:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K/[m[K’ token
+  308 |         drawCurves(0.5, M_PI*[01;31m[K/[m[K5, "up");
+      |                              [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

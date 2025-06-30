@@ -1,8 +1,8 @@
-# Install script for directory: /home/usuario/ros/Miniproject_equipo1_ws/src/motion
+# Install script for directory: /home/lili/ros/Miniproject_equipo1_2_ws/src/motion
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/usuario/ros/Miniproject_equipo1_ws/install/motion")
+  set(CMAKE_INSTALL_PREFIX "/home/lili/ros/Miniproject_equipo1_2_ws/install/motion")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/usuario/ros/Miniproject_equipo1_ws/build/motion/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/lili/ros/Miniproject_equipo1_2_ws/build/motion/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/usuario/ros/Miniproject_equipo1_ws/build/motion/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/lili/ros/Miniproject_equipo1_2_ws/build/motion/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

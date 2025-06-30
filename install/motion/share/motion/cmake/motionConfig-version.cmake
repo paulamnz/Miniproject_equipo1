@@ -1,1 +1,1 @@
-/home/usuario/ros/Miniproject_equipo1_ws/build/motion/ament_cmake_core/motionConfig-version.cmake
+/home/lili/ros/Miniproject_equipo1_2_ws/build/motion/ament_cmake_core/motionConfig-version.cmake

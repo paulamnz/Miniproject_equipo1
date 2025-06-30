@@ -1,0 +1,25 @@
+[0.060s] Invoking command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lili/ros/Miniproject_equipo1_2_ws/build/motion -- -j4 -l4
+[0.253s] [35m[1mConsolidate compiler generated dependencies of target Controller[0m
+[0.319s] [100%] Built target Controller
+[0.379s] Invoked command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lili/ros/Miniproject_equipo1_2_ws/build/motion -- -j4 -l4
+[0.403s] Invoking command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lili/ros/Miniproject_equipo1_2_ws/build/motion
+[0.417s] -- Install configuration: ""
+[0.418s] -- Execute custom install script
+[0.419s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/lib/motion/Controller
+[0.422s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion//launch/launch.xml
+[0.424s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/package_run_dependencies/motion
+[0.425s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/parent_prefix_path/motion
+[0.425s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/ament_prefix_path.sh
+[0.425s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/ament_prefix_path.dsv
+[0.426s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/path.sh
+[0.426s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/environment/path.dsv
+[0.426s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.bash
+[0.426s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.sh
+[0.427s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.zsh
+[0.427s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/local_setup.dsv
+[0.427s] -- Symlinking: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/package.dsv
+[0.449s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/ament_index/resource_index/packages/motion
+[0.450s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/cmake/motionConfig.cmake
+[0.450s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/cmake/motionConfig-version.cmake
+[0.450s] -- Up-to-date symlink: /home/lili/ros/Miniproject_equipo1_2_ws/install/motion/share/motion/package.xml
+[0.460s] Invoked command in '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lili/ros/Miniproject_equipo1_2_ws/build/motion

@@ -2,7 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-  set(install_space "/home/usuario/ros/Miniproject_equipo1_ws/install/motion")
+  set(install_space "/home/lili/ros/Miniproject_equipo1_2_ws/install/motion")
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-set(install_manifest "/home/usuario/ros/Miniproject_equipo1_ws/build/motion/install_manifest.txt")
+set(install_manifest "/home/lili/ros/Miniproject_equipo1_2_ws/build/motion/install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
@@ -57,4 +57,4 @@ message(STATUS "Execute custom uninstall script")
 # begin of custom uninstall code
 
 # uninstall files installed using the symlink install functions
-include("/home/usuario/ros/Miniproject_equipo1_ws/build/motion/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+include("/home/lili/ros/Miniproject_equipo1_2_ws/build/motion/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

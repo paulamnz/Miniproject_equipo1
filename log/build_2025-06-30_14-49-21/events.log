@@ -1,0 +1,132 @@
+[0.000000] (-) TimerEvent: {}
+[0.000725] (motion) JobQueued: {'identifier': 'motion', 'dependencies': OrderedDict()}
+[0.000817] (motion) JobStarted: {'identifier': 'motion'}
+[0.031164] (motion) JobProgress: {'identifier': 'motion', 'progress': 'cmake'}
+[0.033551] (motion) JobProgress: {'identifier': 'motion', 'progress': 'build'}
+[0.034550] (motion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion', '--', '-j4', '-l4'], 'cwd': '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lili'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/lili/uma_environment_tools/matlogger2/build'), ('HOME', '/home/lili'), ('OLDPWD', '/home/lili'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('MANAGERPID', '1678'), ('WORKSPACE_TO_SOURCE', '/home/lili/ros/Miniproject_equipo1_2_ws'), ('SYSTEMD_EXEC_PID', '2011'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4516'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'lili'), ('JOURNAL_STREAM', '8:17573'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lili'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('INTERFACE_TYPE', 'SIMULATION'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/lili/.local/bin'), ('SESSION_MANAGER', 'local/lili-Aspire-V3-572G:@/tmp/.ICE-unix/1838,unix/lili-Aspire-V3-572G:/tmp/.ICE-unix/1838'), ('INVOCATION_ID', '02f5c36acc1d443188de954e265f77d2'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.C7FC92'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:f96a2528-3ceb-481f-abbc-187410ff3535'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lili/ros/Miniproject_equipo1_2_ws/build/motion'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('EDITOR', 'nano -w'), ('CMAKE_PREFIX_PATH', '/home/lili/ros/Miniproject_equipo1_2_ws/install/motion:/opt/ros/humble')]), 'shell': False}
+[0.098662] (-) TimerEvent: {}
+[0.153981] (motion) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Controller\x1b[0m\n'}
+[0.198896] (-) TimerEvent: {}
+[0.207717] (motion) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/Controller.dir/src/Controller.cpp.o\x1b[0m\n'}
+[0.299026] (-) TimerEvent: {}
+[0.399469] (-) TimerEvent: {}
+[0.499898] (-) TimerEvent: {}
+[0.600277] (-) TimerEvent: {}
+[0.700651] (-) TimerEvent: {}
+[0.801003] (-) TimerEvent: {}
+[0.901384] (-) TimerEvent: {}
+[1.001783] (-) TimerEvent: {}
+[1.102172] (-) TimerEvent: {}
+[1.202618] (-) TimerEvent: {}
+[1.303004] (-) TimerEvent: {}
+[1.403398] (-) TimerEvent: {}
+[1.503789] (-) TimerEvent: {}
+[1.604206] (-) TimerEvent: {}
+[1.704620] (-) TimerEvent: {}
+[1.805055] (-) TimerEvent: {}
+[1.905896] (-) TimerEvent: {}
+[2.007656] (-) TimerEvent: {}
+[2.109926] (-) TimerEvent: {}
+[2.211752] (-) TimerEvent: {}
+[2.313441] (-) TimerEvent: {}
+[2.414837] (-) TimerEvent: {}
+[2.516082] (-) TimerEvent: {}
+[2.616916] (-) TimerEvent: {}
+[2.717414] (-) TimerEvent: {}
+[2.817772] (-) TimerEvent: {}
+[2.918385] (-) TimerEvent: {}
+[3.018838] (-) TimerEvent: {}
+[3.119204] (-) TimerEvent: {}
+[3.219576] (-) TimerEvent: {}
+[3.319966] (-) TimerEvent: {}
+[3.420367] (-) TimerEvent: {}
+[3.520733] (-) TimerEvent: {}
+[3.621084] (-) TimerEvent: {}
+[3.721454] (-) TimerEvent: {}
+[3.823325] (-) TimerEvent: {}
+[3.924844] (-) TimerEvent: {}
+[4.025279] (-) TimerEvent: {}
+[4.127116] (-) TimerEvent: {}
+[4.228385] (-) TimerEvent: {}
+[4.329322] (-) TimerEvent: {}
+[4.429759] (-) TimerEvent: {}
+[4.530389] (-) TimerEvent: {}
+[4.631558] (-) TimerEvent: {}
+[4.732174] (-) TimerEvent: {}
+[4.832724] (-) TimerEvent: {}
+[4.933687] (-) TimerEvent: {}
+[5.034104] (-) TimerEvent: {}
+[5.134490] (-) TimerEvent: {}
+[5.234952] (-) TimerEvent: {}
+[5.335362] (-) TimerEvent: {}
+[5.435745] (-) TimerEvent: {}
+[5.536118] (-) TimerEvent: {}
+[5.636489] (-) TimerEvent: {}
+[5.736886] (-) TimerEvent: {}
+[5.837250] (-) TimerEvent: {}
+[5.885554] (motion) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:2\x1b[m\x1b[K:\n'}
+[5.885831] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:31:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K...\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kstd\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.885921] (motion) StderrLine: {'line': b'   31 |                                                 \x1b[01;31m\x1b[Kstd\x1b[m\x1b[K::string direction);\n'}
+[5.885996] (motion) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[5.886074] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:30:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KController::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[KdrawCurves\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.886149] (motion) StderrLine: {'line': b'   30 |   void \x1b[01;31m\x1b[KController\x1b[m\x1b[K::drawCurves(double radius, double radians\n'}
+[5.886218] (motion) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.937386] (-) TimerEvent: {}
+[6.039670] (-) TimerEvent: {}
+[6.063667] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:176:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::drawCurves(double, double, std::string)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.063969] (motion) StderrLine: {'line': b'  176 | void \x1b[01;31m\x1b[KController\x1b[m\x1b[K::drawCurves(double radius, double radians,\n'}
+[6.064122] (motion) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.064458] (motion) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:2\x1b[m\x1b[K:\n'}
+[6.064623] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:30:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate is: \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::drawCurves(double, double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.064787] (motion) StderrLine: {'line': b'   30 |   void \x1b[01;36m\x1b[KController\x1b[m\x1b[K::drawCurves(double radius, double radians\n'}
+[6.064929] (motion) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.065073] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:13:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Controller\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[6.065213] (motion) StderrLine: {'line': b'   13 | class \x1b[01;36m\x1b[KController\x1b[m\x1b[K\n'}
+[6.065351] (motion) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.065506] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::drawScene()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.065667] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:227:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KController::drawCurves(double, double, const char [5])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.065816] (motion) StderrLine: {'line': b'  227 |         \x1b[01;31m\x1b[KdrawCurves(0.5, M_PI, "down")\x1b[m\x1b[K;\n'}
+[6.065956] (motion) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.066093] (motion) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:2\x1b[m\x1b[K:\n'}
+[6.066231] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:30:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid Controller::drawCurves(double, double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.066371] (motion) StderrLine: {'line': b'   30 |   void \x1b[01;36m\x1b[KController\x1b[m\x1b[K::drawCurves(double radius, double radians\n'}
+[6.066510] (motion) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.067757] (motion) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/include/motion/Controller.hpp:30:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 3 provided\n'}
+[6.139788] (-) TimerEvent: {}
+[6.240204] (-) TimerEvent: {}
+[6.340585] (-) TimerEvent: {}
+[6.441012] (-) TimerEvent: {}
+[6.541414] (-) TimerEvent: {}
+[6.641848] (-) TimerEvent: {}
+[6.742249] (-) TimerEvent: {}
+[6.842663] (-) TimerEvent: {}
+[6.943050] (-) TimerEvent: {}
+[7.043499] (-) TimerEvent: {}
+[7.143944] (-) TimerEvent: {}
+[7.244353] (-) TimerEvent: {}
+[7.344749] (-) TimerEvent: {}
+[7.445104] (-) TimerEvent: {}
+[7.545478] (-) TimerEvent: {}
+[7.645896] (-) TimerEvent: {}
+[7.746303] (-) TimerEvent: {}
+[7.846681] (-) TimerEvent: {}
+[7.947053] (-) TimerEvent: {}
+[8.047405] (-) TimerEvent: {}
+[8.147823] (-) TimerEvent: {}
+[8.248199] (-) TimerEvent: {}
+[8.348532] (-) TimerEvent: {}
+[8.448927] (-) TimerEvent: {}
+[8.549274] (-) TimerEvent: {}
+[8.649648] (-) TimerEvent: {}
+[8.750021] (-) TimerEvent: {}
+[8.850396] (-) TimerEvent: {}
+[8.950773] (-) TimerEvent: {}
+[9.051156] (-) TimerEvent: {}
+[9.151561] (-) TimerEvent: {}
+[9.251942] (-) TimerEvent: {}
+[9.268864] (motion) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1\n'}
+[9.269286] (motion) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2\n'}
+[9.269565] (motion) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[9.272078] (motion) CommandEnded: {'returncode': 2}
+[9.288816] (motion) JobEnded: {'identifier': 'motion', 'rc': 2}
+[9.299765] (-) EventReactorShutdown: {}

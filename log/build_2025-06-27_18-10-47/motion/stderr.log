@@ -1,9 +1,0 @@
-[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::[01;32m[KdrawScene[m[K()[m[K’:
-[01m[K/home/usuario/ros/Miniproject_equipo1_ws/src/motion/src/Controller.cpp:180:21:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K1.0e-2[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
-  180 |         move_to(1,1,[01;31m[K0.01[m[K);
-      |                     [01;31m[K^~~~[m[K
-      |                     [01;31m[K|[m[K
-      |                     [01;31m[Kdouble[m[K
-gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

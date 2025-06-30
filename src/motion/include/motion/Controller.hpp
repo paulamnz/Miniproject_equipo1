@@ -28,9 +28,7 @@ public:
   void drawTriangleUP(double side, bool left);
   void drawRectangleAboveHexagon(double base, double height);
   void drawCurves(double radius,
-                  bool full,
-                  bool half,
-                  bool quarter,
+                  double radians,
                   std::string direction);
 
   // escena completa

@@ -1,0 +1,10 @@
+[01m[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::drawScene()[m[K’:
+[01m[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:239:18:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kvoid rotate_to(double, rclcpp::Node::SharedPtr, rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> > >::SharedPtr)[m[K’
+  239 |         [01;31m[Krotate_to(M_PI/2)[m[K
+      |         [01;31m[K~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/lili/ros/Miniproject_equipo1_2_ws/src/motion/src/Controller.cpp:12:6:[m[K [01;36m[Knote: [m[Kdeclared here
+   12 | void [01;36m[Krotate_to[m[K(double target_angle, rclcpp::Node::SharedPtr node,
+      |      [01;36m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Controller.dir/build.make:76: CMakeFiles/Controller.dir/src/Controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

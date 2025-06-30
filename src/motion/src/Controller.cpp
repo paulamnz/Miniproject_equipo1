@@ -173,33 +173,16 @@ void Controller::drawRectangleAboveHexagon(double base, double height)
 	forward(base);	   // volver
 }
 
-void Controller::drawCurves(double radius,
-							bool full,
-							bool half,
-							bool quarter,
-							std::string direction)
+void Controller::drawCurves(double radius, double radians,
+						std::string direction)
 {
-	double target_angle = 0.0;
-
-	if (full)
-		target_angle = 2 * M_PI;
-	else if (half)
-		target_angle = M_PI;
-	else if (quarter)
-		target_angle = M_PI / 2;
-	else
-		return;
-
-	// Orientación inicial
-	if (direction == "right")      rotate_to(0, node_, pub_);
-	else if (direction == "up")    rotate_to(M_PI / 2, node_, pub_);
-	else if (direction == "left")  rotate_to(M_PI, node_, pub_);
-	else if (direction == "down")  rotate_to(3 * M_PI / 2, node_, pub_);
-	else return;
-
+	double target_angle = radians;
+	double linear = 1;
+	double angular;
 	// Definimos velocidades ya existentes
-	double linear = linear_speed_;
-	double angular = linear / radius;
+	if (direction == "up")      angular = linear / radius;
+	else if (direction == "down")    angular = -linear / radius;
+	else return;
 
 	geometry_msgs::msg::Twist cmd;
 	cmd.linear.x = linear;
@@ -231,7 +214,131 @@ void Controller::drawCurves(double radius,
 void Controller::drawScene()
 {
 	double side = 1.5;
+	double letter_x_pose = 0.7;
 	rclcpp::sleep_for(500ms);
+
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+	move_to(letter_x_pose, 8.5, node_, pub_); //nos movemos a la posición inicial
+	rotate_to(M_PI/2,node_, pub_);
+	
+	//R
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(2,1);
+	rotate_to(M_PI/16,node_, pub_);
+	drawCurves(0.5, M_PI, "down");
+	rotate_to(-M_PI*3/8,node_, pub_);
+	forward(1.1,1);
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 1;
+	rotate_to(0,node_, pub_);
+	move_to(letter_x_pose, 8.5, node_, pub_); //nos movemos a la posición de "o"
+	rotate_to(0,node_, pub_);
+
+	//o
+	pen(0, 255, 0, 2, false); // lápiz verde
+	drawCurves(0.5, 2*M_PI, "up");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 0.75;
+	rotate_to(0,node_, pub_);
+	move_to(letter_x_pose, 8.5, node_, pub_); //nos movemos a la posición de "b"
+	rotate_to(M_PI/2,node_, pub_);
+
+	//b
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(2,1);
+	rotate_to(-M_PI/2,node_, pub_);
+	forward(1,1);
+	rotate_to(M_PI/16,node_, pub_);
+	drawCurves(0.5, M_PI, "down");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 1.25;
+	rotate_to(0,node_, pub_);
+	move_to(letter_x_pose, 8.5, node_, pub_); //nos movemos a la posición de "o"
+	rotate_to(0,node_, pub_);
+
+	//o
+	pen(0, 255, 0, 2, false); // lápiz verde
+	drawCurves(0.5, 2*M_PI, "up");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 0.9;
+	rotate_to(0,node_, pub_);
+	move_to(letter_x_pose, 8.5, node_, pub_); //nos movemos a la posición de "R"
+	rotate_to(M_PI/2,node_, pub_);
+
+	//R
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(2,1);
+	rotate_to(M_PI/16,node_, pub_);
+	drawCurves(0.5, M_PI, "down");
+	rotate_to(-M_PI*3/8,node_, pub_);
+	forward(1.1,1);
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 0.5;
+	rotate_to(M_PI/2,node_, pub_);
+	move_to(letter_x_pose, 9, node_, pub_); //nos movemos a la posición de "e"
+	rotate_to(0,node_, pub_);
+
+	//e
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(0.85,1);
+	rotate_to(M_PI/2,node_, pub_);
+	drawCurves(0.5, M_PI*13/8, "up");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 1.3;
+	rotate_to(-M_PI/8,node_, pub_);
+	move_to(letter_x_pose, 8.55, node_, pub_); //nos movemos a la posición de "s"
+	rotate_to(-M_PI/4,node_, pub_);
+
+	//s
+	pen(0, 255, 0, 2, false); // lápiz verde
+	drawCurves(0.25, M_PI*8/8, "up");
+	drawCurves(0.25, M_PI*9/8, "down");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 1.55;
+	rotate_to(-M_PI/8,node_, pub_);
+	move_to(letter_x_pose, 9, node_, pub_); //nos movemos a la posición de "c"
+	rotate_to(M_PI/2,node_, pub_);
+	drawCurves(0.5, M_PI/5, "up");
+
+	//c
+	pen(0, 255, 0, 2, false); // lápiz verde
+	drawCurves(0.5, M_PI*11/8, "up");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 0.2;
+	move_to(letter_x_pose, 9.5, node_, pub_); //nos movemos a la posición de "u"
+	rotate_to(-M_PI/2,node_, pub_);
+
+	//u
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(0.5,1);
+	drawCurves(0.4, M_PI*7/8, "up");
+	rotate_to(M_PI/2,node_, pub_);
+	forward(0.45,1);
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+	letter_x_pose = letter_x_pose + 1;
+	rotate_to(-M_PI/3,node_, pub_);
+	move_to(letter_x_pose, 9, node_, pub_); //nos movemos a la posición de "e"
+	rotate_to(0,node_, pub_);
+
+	//e
+	pen(0, 255, 0, 2, false); // lápiz verde
+	forward(0.85,1);
+	rotate_to(M_PI/2,node_, pub_);
+	drawCurves(0.5, M_PI*13/8, "up");
+	pen(255, 0, 0, 2, true); // desactivamos el lapiz
+
+
+rclcpp::sleep_for(5s);
+
 	pen(255, 0, 0, 2, true); // desactivamos el lapiz
 	move_to(3, 3, node_, pub_);
 	pen(0, 255, 0, 2, false); // lápiz verde
@@ -243,9 +350,9 @@ void Controller::drawScene()
 
 	drawTriangleUP(side, false);
 
-	drawCurves(2.0, true, false, false, "right"); // círculo completo hacia la derecha
-	drawCurves(1.0, false, true, false, "up");	  // media circunferencia hacia arriba
-	drawCurves(1.0, false, false, true, "left");  // cuarto de circunferencia a la izquierda
+	//drawCurves(2.0, true, false, false, "right"); // círculo completo hacia la derecha
+	//drawCurves(1.0, false, true, false, "up");	  // media circunferencia hacia arriba
+	//drawCurves(1.0, false, false, true, "left");  // cuarto de circunferencia a la izquierda
 
 	RCLCPP_INFO(node_->get_logger(), "Triángulo izquierdo terminado.");
 }
