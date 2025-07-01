@@ -15,7 +15,7 @@ void move_to(double x_goal, double y_goal,
 			 rclcpp::Node::SharedPtr node,
 			 rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub);
 
-turtlesim::msg::Pose pose;
+turtlesim::msg::Pose pose; // Variable global para guardar la pose actual
 
 Controller::Controller(NodePtr node)
 	: node_(node)
@@ -23,8 +23,7 @@ Controller::Controller(NodePtr node)
 	using std::placeholders::_1;
 
 	// Creamos el publicador de velocidad para la tortuga (/turtle1/cmd_vel)
-	pub_ = node_->create_publisher<geometry_msgs::msg::Twist>(
-		"/turtle1/cmd_vel", 10);
+	pub_ = node_->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
 
 	// Creamos el subscriptor de pose para la tortuga (/turtle1/pose)
 	sub_ = node_->create_subscription<turtlesim::msg::Pose>(
@@ -33,39 +32,33 @@ Controller::Controller(NodePtr node)
 
 void Controller::execute_command(const turtlesim::msg::Pose &msg)
 {
-	pose = msg;
+	pose = msg; // Actualizamos la pose global
 }
 
-void Controller::pen(uint8_t r, uint8_t g, uint8_t b,
-					 uint8_t width, bool off)
+void Controller::pen(uint8_t r, uint8_t g, uint8_t b, uint8_t width, bool off)
 {
 	// Cliente al servicio /turtle1/set_pen para cambiar color/grosor
-	auto client = node_->create_client<turtlesim::srv::SetPen>(
-		"/turtle1/set_pen");
-	// Espera hasta que el servicio esté disponible
+	auto client = node_->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
+
 	while (!client->wait_for_service(1s) && rclcpp::ok())
 	{
-		RCLCPP_INFO(node_->get_logger(),
-					"Esperando /turtle1/set_pen...");
+		RCLCPP_INFO(node_->get_logger(), "Esperando /turtle1/set_pen...");
 	}
-	// Preparamos la petición
-	auto req = std::make_shared<turtlesim::srv::SetPen::Request>();
-	req->r = r;			// componente rojo
-	req->g = g;			// componente verde
-	req->b = b;			// componente azul
-	req->width = width; // grosor
-	req->off = off;		// si true, levanta el lápiz
 
-	// Enviamos la petición y esperamos la respuesta
+	auto req = std::make_shared<turtlesim::srv::SetPen::Request>();
+	req->r = r;
+	req->g = g;
+	req->b = b;
+	req->width = width;
+	req->off = off;
+
 	auto fut = client->async_send_request(req);
 	rclcpp::spin_until_future_complete(node_, fut);
 }
 
 void Controller::forward(double distance, double speed)
 {
-	// Creamos el mensaje de velocidad lineal
 	geometry_msgs::msg::Twist cmd;
-	// Asignar sentido: positivo o negativo según distance
 	cmd.linear.x = (distance >= 0 ? speed : -speed);
 
 	double start_x = pose.x;
@@ -79,13 +72,11 @@ void Controller::forward(double distance, double speed)
 		rate.sleep();
 	}
 	stop();
-
 	rclcpp::sleep_for(50ms);
 }
 
 void Controller::rotate(double radians, double angular_speed)
 {
-
 	geometry_msgs::msg::Twist cmd;
 	rclcpp::Rate rate(50);
 
@@ -97,11 +88,9 @@ void Controller::rotate(double radians, double angular_speed)
 		rclcpp::spin_some(node_);
 		double error = normalize_angle(target_angle - pose.theta);
 
-		// Salir si el error es suficientemente pequeño
 		if (std::abs(error) < 0.01)
 			break;
 
-		// Sentido de giro con velocidad constante o proporcional (simple)
 		cmd.angular.z = (error > 0 ? 1.0 : -1.0) * angular_speed;
 		pub_->publish(cmd);
 		rate.sleep();
@@ -113,93 +102,123 @@ void Controller::rotate(double radians, double angular_speed)
 
 void Controller::stop()
 {
-	// Publicar mensaje con valores cero para detener
 	pub_->publish(geometry_msgs::msg::Twist{});
 }
 
+// ================= FUNCIONES DE DIBUJO =====================
+
 void Controller::drawHexagonFlat(double side)
 {
-	// Sincronizamos al eje X
+	// Guardar el punto de partida
+	double x0 = pose.x;
+	double y0 = pose.y;
+
+	// Asegurarnos de empezar mirando al este
 	rotate_to(0, node_, pub_);
-	// Hexágono con base horizontal
+
+	// Bajar lápiz para dibujar
+	pen(0, 255, 0, 2, false);
+
+	// Recorremos las 6 aristas del hexágono
 	for (int i = 0; i < 6; ++i)
 	{
-		forward(side);
-		rotate_to(normalize_angle(pose.theta + M_PI / 3), node_, pub_);
+		// Ángulo absoluto de esta arista (hexágono plano)
+		double angle = normalize_angle(i * M_PI / 3.0);
+
+		// Orientarnos hacia ese ángulo
+		rotate_to(angle, node_, pub_);
+
+		// Calcular el siguiente vértice
+		double xt = x0 + side * std::cos(angle);
+		double yt = y0 + side * std::sin(angle);
+
+		// Movernos exactamente a ese vértice
+		move_to(xt, yt, node_, pub_);
+
+		// Actualizar punto de partida
+		x0 = xt;
+		y0 = yt;
 	}
+
+	// Levantar lápiz al terminar
+	pen(255, 0, 0, 2, true);
+
+	// Opcional: volver a orientar al este
+	rotate_to(0, node_, pub_);
 }
 
 void Controller::drawTriangleUP(double side, bool left)
 {
-	// Sincronizamos al eje X
 	rotate_to(0, node_, pub_);
-
 	if (left)
 	{
 		rotate_to(2 * M_PI / 3, node_, pub_);
 		forward(side);
-
 		rotate_to(4 * M_PI / 3, node_, pub_);
 		forward(side);
-
 		rotate_to(0, node_, pub_);
 		forward(side);
 	}
 	else
 	{
 		forward(side);
-
 		rotate_to(2 * M_PI / 3, node_, pub_);
 		forward(side);
-
 		rotate_to(4 * M_PI / 3, node_, pub_);
 		forward(side);
 	}
-
 	stop();
 }
 
 void Controller::drawRectangleAboveHexagon(double base, double height)
 {
-	// Sincronizamos al eje X
-	//  Desde base del hexágono, estamos mirando al este
-	rotate(M_PI / 2);  // mirar hacia arriba
-	forward(height);   // subir
-	rotate(-M_PI / 2); // mirar este
-	forward(base);	   // base rectángulo
-	rotate(-M_PI / 2); // mirar abajo
-	forward(height);   // bajar
-	rotate(-M_PI / 2); // mirar oeste
-	forward(base);	   // volver
+	// 0. Asegurarnos de llevar el lápiz levantado mientras nos movemos
+	pen(255, 0, 0, 2, true);
+
+	// 1. Calcular la altura hasta el vértice superior del hexágono (apotema * 2)
+	//    apotema = (√3/2) * base
+	double hex_apex = std::sqrt(3.0) * base;
+	double climb = hex_apex;
+
+	// 2. Subir sin dibujar hasta justo por encima del vértice del hexágono
+	rotate_to(M_PI / 2, node_, pub_); // mirar norte
+	forward(climb);
+
+	// 3. Encender lápiz para empezar el rectángulo
+	pen(0, 0, 255, 2, false);
+
+	// 4. Lado superior del rectángulo: subir (norte)
+	rotate_to(M_PI / 2, node_, pub_);
+	forward(height);
+
+	// 5. Lado izquierdo del rectángulo: girar a la izquierda (oeste)
+	rotate_to(M_PI, node_, pub_);
+	forward(base);
+
+	// 6. Lado inferior del rectángulo: bajar (sur)
+	rotate_to(-M_PI / 2, node_, pub_);
+	forward(height);
+
+	// 7. Lado derecho del rectángulo: girar a la derecha (este)
+	rotate_to(0, node_, pub_);
+	forward(base);
+
+	// 8. Levantar lápiz al terminar
+	pen(255, 0, 0, 2, true);
 }
 
-void Controller::drawCurves(double radius,
-							bool full,
-							bool half,
-							bool quarter,
-							std::string direction)
+void Controller::drawCurves(double radius, double radians, std::string direction)
 {
-	double target_angle = 0.0;
+	double target_angle = radians;
+	double linear = 1.0;
+	double angular;
 
-	if (full)
-		target_angle = 2 * M_PI;
-	else if (half)
-		target_angle = M_PI;
-	else if (quarter)
-		target_angle = M_PI / 2;
+	if (direction == "up")
+		angular = linear / radius;
+	else if (direction == "down")
+		angular = -linear / radius;
 	else
 		return;
-
-	// Orientación inicial
-	if (direction == "right")      rotate_to(0, node_, pub_);
-	else if (direction == "up")    rotate_to(M_PI / 2, node_, pub_);
-	else if (direction == "left")  rotate_to(M_PI, node_, pub_);
-	else if (direction == "down")  rotate_to(3 * M_PI / 2, node_, pub_);
-	else return;
-
-	// Definimos velocidades ya existentes
-	double linear = linear_speed_;
-	double angular = linear / radius;
 
 	geometry_msgs::msg::Twist cmd;
 	cmd.linear.x = linear;
@@ -214,7 +233,6 @@ void Controller::drawCurves(double radius,
 		rclcpp::spin_some(node_);
 		pub_->publish(cmd);
 
-		// Calculamos cuánto giró desde la última iteración
 		double delta_theta = normalize_angle(pose.theta - last_theta);
 		accumulated_angle += std::abs(delta_theta);
 		last_theta = pose.theta;
@@ -226,50 +244,152 @@ void Controller::drawCurves(double radius,
 	rclcpp::sleep_for(50ms);
 }
 
+// ================= FUNCIONES DE LETRAS =====================
 
+void Controller::drawLetterR(double x)
+{
+	move_to(x, 8.5, node_, pub_);
+	rotate_to(M_PI / 2, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	forward(2, 1);
+	rotate_to(M_PI / 16, node_, pub_);
+	drawCurves(0.5, M_PI, "down");
+	rotate_to(-M_PI * 3 / 8, node_, pub_);
+	forward(1.1, 1);
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterO(double x)
+{
+	move_to(x, 8.5, node_, pub_);
+	rotate_to(0, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	drawCurves(0.5, 2 * M_PI, "up");
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterB(double x)
+{
+	move_to(x, 8.5, node_, pub_);
+	rotate_to(M_PI / 2, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	forward(2, 1);
+	rotate_to(-M_PI / 2, node_, pub_);
+	forward(1, 1);
+	rotate_to(M_PI / 16, node_, pub_);
+	drawCurves(0.5, M_PI, "down");
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterE(double x)
+{
+	move_to(x, 9, node_, pub_);
+	rotate_to(0, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	forward(0.85, 1);
+	rotate_to(M_PI / 2, node_, pub_);
+	drawCurves(0.5, M_PI * 13 / 8, "up");
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterS(double x)
+{
+	move_to(x, 8.55, node_, pub_);
+	rotate_to(-M_PI / 4, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	drawCurves(0.25, M_PI, "up");
+	drawCurves(0.25, M_PI * 9 / 8, "down");
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterC(double x)
+{
+	move_to(x, 9, node_, pub_);
+	rotate_to(M_PI / 2, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	drawCurves(0.5, M_PI / 5, "up");
+	drawCurves(0.5, M_PI * 11 / 8, "up");
+	pen(255, 0, 0, 2, true);
+}
+
+void Controller::drawLetterU(double x)
+{
+	move_to(x, 9.5, node_, pub_);
+	rotate_to(-M_PI / 2, node_, pub_);
+	pen(0, 255, 0, 2, false);
+	forward(0.5, 1);
+	drawCurves(0.4, M_PI * 7 / 8, "up");
+	rotate_to(M_PI / 2, node_, pub_);
+	forward(0.45, 1);
+	pen(255, 0, 0, 2, true);
+}
+
+// ================= FUNCIONES DE ESCENA COMPLETA =====================
 
 void Controller::drawScene()
 {
 	double side = 1.5;
+	double x = 0.7;
 	rclcpp::sleep_for(500ms);
-	pen(255, 0, 0, 2, true); // desactivamos el lapiz
-	move_to(3, 3, node_, pub_);
-	pen(0, 255, 0, 2, false); // lápiz verde
 
-	drawTriangleUP(side, true);
+	pen(255, 0, 0, 2, true); // Levantar el lápiz antes de moverse
 
+	// Letras "ROBORESCUE"
+	drawLetterR(x);
+	x += 1.0;
+	drawLetterO(x);
+	x += 0.75;
+	drawLetterB(x);
+	x += 1.25;
+	drawLetterO(x);
+	x += 0.9;
+	drawLetterR(x);
+	x += 0.5;
+	drawLetterE(x);
+	x += 1.3;
+	drawLetterS(x);
+	x += 1.55;
+	drawLetterC(x);
+	x += 0.2;
+	drawLetterU(x);
+	x += 1.0;
+	drawLetterE(x);
+
+	rclcpp::sleep_for(2s);
+
+	pen(255, 0, 0, 2, true);
+	move_to(4.88, 3, node_, pub_);
+	pen(0, 255, 0, 2, false);
+
+	drawTriangleUP(side - 0.5, true);
+	forward(0.5);
 	drawHexagonFlat(side);
 	forward(side);
+	pen(0, 255, 0, 2, false);
+	drawTriangleUP(side - 0.5, false);
 
-	drawTriangleUP(side, false);
+	drawRectangleAboveHexagon(side, 0.70);
 
-	drawCurves(2.0, true, false, false, "right"); // círculo completo hacia la derecha
-	drawCurves(1.0, false, true, false, "up");	  // media circunferencia hacia arriba
-	drawCurves(1.0, false, false, true, "left");  // cuarto de circunferencia a la izquierda
-
-	RCLCPP_INFO(node_->get_logger(), "Triángulo izquierdo terminado.");
+	RCLCPP_INFO(node_->get_logger(), "Escena completada.");
 }
 
 int main(int argc, char **argv)
 {
-	// Inicializar ROS2 y crear nodo
 	rclcpp::init(argc, argv);
 	auto node = std::make_shared<rclcpp::Node>("shape_drawer");
 	Controller ctrl(node);
-
-	// Ejecutar la rutina de dibujo
 	ctrl.drawScene();
-
-	// Finalizar ROS2
 	rclcpp::shutdown();
 	return 0;
 }
 
-// Funciones auxiliares
+// ================= FUNCIONES AUXILIARES =====================
+
 double euclidean_distance(double x1, double y1, double x2, double y2)
 {
 	return std::hypot(x2 - x1, y2 - y1);
 }
+
 double normalize_angle(double angle)
 {
 	while (angle > M_PI)
@@ -278,6 +398,7 @@ double normalize_angle(double angle)
 		angle += 2 * M_PI;
 	return angle;
 }
+
 void rotate_to(double target_angle, rclcpp::Node::SharedPtr node,
 			   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub)
 {
@@ -288,18 +409,16 @@ void rotate_to(double target_angle, rclcpp::Node::SharedPtr node,
 	{
 		rclcpp::spin_some(node);
 		double error = normalize_angle(target_angle - pose.theta);
-
 		if (std::abs(error) < 0.01)
 			break;
-
 		cmd.angular.z = (error > 0 ? 1.0 : -1.0) * std::min(1.0, std::abs(error));
 		pub->publish(cmd);
 		rate.sleep();
 	}
-
 	pub->publish(geometry_msgs::msg::Twist{});
 	rclcpp::sleep_for(50ms);
 }
+
 void move_to(double x_goal, double y_goal,
 			 rclcpp::Node::SharedPtr node,
 			 rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub)
@@ -311,30 +430,23 @@ void move_to(double x_goal, double y_goal,
 	{
 		rclcpp::spin_some(node);
 
-		// Calculo del error
 		double dx = x_goal - pose.x;
 		double dy = y_goal - pose.y;
-		double distance = std::hypot(dx, dy); // distancia hasta el punto.
+		double distance = std::hypot(dx, dy);
 
-		// Calculamos cuánto falta para llegar al punto. Si distance < 0.01, ya hemos llegado.
 		if (distance < 0.01)
 			break;
 
-		// CALCULO DEL ÁNGULO DESEADO
-		// Usamos atan2 para obtener el angulo desde la tortuga hacia el punto objetivo
-		// normalize_angle asegura que el error esté entre -pi y pi
 		double target_angle = std::atan2(dy, dx);
 		double angle_error = normalize_angle(target_angle - pose.theta);
 
-		// PUBLICAMOS VELOCIDADES PARA MOVER Y CORREGIR
-		//  Ajuste de dirección con algo de control proporcional
-		cmd.linear.x = std::min(1.0, distance);						// velocidad proporcional
-		cmd.angular.z = std::min(1.0, std::max(-1.0, angle_error)); // corrección de orientación
+		cmd.linear.x = std::min(1.0, distance);
+		cmd.angular.z = std::min(1.0, std::max(-1.0, angle_error));
 
 		pub->publish(cmd);
 		rate.sleep();
 	}
 
-	pub->publish(geometry_msgs::msg::Twist{}); // stop
+	pub->publish(geometry_msgs::msg::Twist{});
 	rclcpp::sleep_for(50ms);
 }

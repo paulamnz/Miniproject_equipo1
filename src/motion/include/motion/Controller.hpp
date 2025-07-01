@@ -28,16 +28,20 @@ public:
   void drawTriangleUP(double side, bool left);
   void drawRectangleAboveHexagon(double base, double height);
   void drawCurves(double radius,
-                  bool full,
-                  bool half,
-                  bool quarter,
+                  double radians,
                   std::string direction);
+  void drawLetterR(double x);
+  void drawLetterO(double x);
+  void drawLetterB(double x);
+  void drawLetterE(double x);
+  void drawLetterS(double x);
+  void drawLetterC(double x);
+  void drawLetterU(double x);
 
   // escena completa
   void drawScene();
 
 private:
-
   double linear_speed_ = 2.0;
   NodePtr node_;
   rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;
